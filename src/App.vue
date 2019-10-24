@@ -12,9 +12,10 @@
   text-align: center;
   color: #2c3e50;
   .button-lg {
-    width:335px;
     height:44px;
-    background:linear-gradient(0deg,rgba(254,225,99,1),rgba(252,212,55,1));
+    font-family: 'PingFangSC-Regular';
+    font-weight: 'Regular';
+    background: url('./images/button@2x.png');
     border-radius:22px;
     outline: none;
     border: none;

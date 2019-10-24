@@ -1,16 +1,22 @@
 <template>
   <div class="home">
     <Header />
-    <img class="banner" src="../../images/home_bg@2x.png" width="130" height="150" />
-    <a @click="handleRegister" class="mb24">
-      <img src="../../images/1.png" width="308" height="124" alt="" />
+    <img class="banner" src="../../images/home_bg@2x.png" width="258" height="299" />
+    <a @click="handleRegister" class="capture">
+      <img src="../../images/1.png" width="355" height="124" alt="" />
     </a>
     <Button class="button-lg mb24" @click="handleRegister">
-      <img src="../../images/user2x.png" width="20" height="20" alt="" />
+      <img class="align-bottom mr4" src="../../images/user2x.png" width="17" height="20" alt="" />
       <span>电话通知车主挪车</span>
     </Button>
     <Button class="button-lg" @click="handleRegister">
-      <img src="../../images/mobile@2x.png" width="20" height="20" alt="" />
+      <img
+        class="align-bottom mr4"
+        src="../../images/mobile@2x.png"
+        width="20"
+        height="20"
+        alt=""
+      />
       <span>登陆我的账号</span>
     </Button>
   </div>
@@ -78,20 +84,32 @@ export default {
 .home {
   .banner {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -102px;
+    left: -76px;
   }
   background-repeat: no-repeat;
   .capture {
-    border-radius: 10px;
-    width: 355px;
-    height: 120px;
+    display: block;
+    margin-bottom: 14px;
+    margin-top: 10px;
     .img {
       border-radius: 10px;
     }
   }
   .mb24 {
     margin-bottom: 24px;
+  }
+  .mt24 {
+    margin-top: 24px;
+  }
+  .align-bottom {
+    vertical-align: bottom;
+  }
+  .mr4 {
+    margin-right: 4px;
+  }
+  .button-lg {
+    width: 355px;
   }
 }
 

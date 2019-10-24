@@ -154,6 +154,8 @@ export default {
   }
   .button-lg {
     margin-top: 40px;
+    width: 225px;
+    color: #231815;
   }
 }
 
