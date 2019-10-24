@@ -12,16 +12,7 @@ export const FETCH_COMMENTS = 'fetchComments';
 export const SET_COMMENTS = 'setComments';
 
 const initialState = {
-  userInfo: {
-  },
-  article: {
-    author: {},
-    title: '',
-    description: '',
-    body: '',
-    tagList: [],
-  },
-  comments: [],
+  userInfo: {},
 };
 
 export const state = { ...initialState };

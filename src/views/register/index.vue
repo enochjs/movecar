@@ -68,10 +68,8 @@
 
 <script>
 
-// import { mapGetters } from 'vuex';
 import { TextInput, Button, Toast } from '@nutui/nutui';
 import Header from '@/components/Header.vue';
-// import ShortInput from '@/components/shortInput/index.vue';
 import { FETCH_REGISTER_USER } from '../../store/register';
 import { mobileReg, carIdReg } from '../../utils/regRxp';
 
@@ -107,7 +105,6 @@ export default {
         Toast.fail('请输入验证码！');
         return;
       }
-
       this.$store.dispatch(FETCH_REGISTER_USER, {
         mobile: this.mobile,
         password: this.password,
@@ -120,8 +117,6 @@ export default {
     Header,
     TextInput,
     Button,
-    // Picker,
-    // ShortInput,
   },
   mounted() {
   },
