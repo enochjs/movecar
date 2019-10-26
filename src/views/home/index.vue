@@ -3,7 +3,7 @@
     <Header />
     <img class="banner" src="../../images/home_bg@2x.png" width="258" height="299" />
     <a class="capture" @click="handleGetCapture" >
-      <img src="../../images/capture.png" width="355" height="124" alt="" />
+      <img src="../../images/capture.png" width="100%" height="100%" alt="" />
     </a>
     <Button class="button-lg mb24" @click="handleNoticeOwner">
       <img class="align-bottom mr4" src="../../images/user2x.png" width="17" height="20" alt="" />
@@ -104,7 +104,7 @@ export default {
     margin-right: 4px;
   }
   .button-lg {
-    width: 355px;
+    width: 100%;
   }
 
   .mobile-title {
