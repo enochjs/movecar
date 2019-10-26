@@ -44,12 +44,11 @@
 
 import { TextInput, Button, Toast } from '@nutui/nutui';
 import Header from '@/components/Header.vue';
-import { FETCH_REGISTER_USER } from '../../store/register';
-import { mobileReg, carIdReg } from '../../utils/regRxp';
+import { mobileReg } from '../../utils/regRxp';
 import { loginApi } from '../../store/api'
 
 export default {
-  name: 'register',
+  name: 'login',
   data() {
     return {
       mobile: '',
@@ -87,8 +86,6 @@ export default {
     Header,
     TextInput,
     Button,
-    // Picker,
-    // ShortInput,
   },
   mounted() {
   },

@@ -19,40 +19,56 @@
       />
       <span>登陆我的账号</span>
     </Button>
+    <nut-dialog
+      :visible="dialogShow"
+      :noOkBtn="true"
+      cancelBtnTxt="关 闭"
+      @cancel-btn-click="dialogShow=false"
+      @close="dialogShow=false"
+    >
+      <img src="../../images/account@2x.png" width="80" height="80" />
+      <div class="mobile-title">联系电话</div>
+      <div class="mobile">{{mobile}}</div>
+    </nut-dialog>
   </div>
 </template>
 
 <script>
 
-import { Button } from '@nutui/nutui';
+import Vue from 'vue';
+import { Button, Dialog } from '@nutui/nutui';
 import Header from '@/components/Header.vue';
+import { getCarOwnweMobileApi, getQRcodeApi } from '../../store/api'
+
+Dialog.install(Vue);
 
 export default {
-  name: 'register',
-  data() {
-    return {
-      mobile: '',
-      password: '',
-      passwordConfirm: '',
-      capture: '',
-      carId: '',
-    };
-  },
-  methods: {
-    handleGetCapture() {
-
-    },
-
-    handleNoticeOwner() {
-
-    },
-    handleLogin() {
-
-    },
-  },
+  name: 'home',
   components: {
     Header,
     Button,
+  },
+  data() {
+    return {
+      mobile: '',
+      dialogShow: false,
+    };
+  },
+  methods: {
+    // 获取二维码
+    async handleGetCapture() {
+      const qRcode = await getQRcodeApi()
+    },
+    // 通知车主
+    async handleNoticeOwner() {
+      const mobile = await getCarOwnweMobileApi();
+      this.mobile = mobile;
+      this.dialogShow = true;
+    },
+    // 登录
+    handleLogin() {
+      this.$router.push({ path: '/login' })
+    },
   },
   mounted() {
   },
@@ -89,6 +105,16 @@ export default {
   }
   .button-lg {
     width: 355px;
+  }
+
+  .mobile-title {
+    color: #111111;
+    margin: 12px 0;
+  }
+  .mobile {
+    background-color: #EDEDED;
+    padding: 10px;
+    border-radius: 8px;
   }
 }
 

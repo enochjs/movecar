@@ -24,5 +24,8 @@
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     color: #34333E;
   }
+  .nut-dialog {
+    width: 235px;
+  }
 }
 </style>

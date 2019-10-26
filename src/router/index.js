@@ -4,6 +4,7 @@ import Home from '../views/home/index.vue';
 import Register from '../views/register/index.vue';
 import Login from '../views/login/index.vue';
 import ForgetPassword from '../views/login/forgetPassword.vue';
+import Account from '../views/account/index.vue';
 
 Vue.use(VueRouter);
 
@@ -12,11 +13,6 @@ const routes = [
     path: '/',
     name: 'home',
     component: Home,
-  },
-  {
-    path: '/about',
-    name: 'about',
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
   },
   {
     path: '/rigister',
@@ -32,6 +28,11 @@ const routes = [
     path: '/forget/password',
     name: 'forgetPassword',
     component: ForgetPassword,
+  },
+  {
+    path: '/account',
+    name: 'account',
+    component: Account,
   },
 ];
 
